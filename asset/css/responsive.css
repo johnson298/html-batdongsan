@@ -1,0 +1,51 @@
+@media (min-width: 576px) {
+*{}
+}
+
+/*pc*/
+@media (min-width: 1025px) {
+*{}
+}
+
+/*laptop*/
+@media (max-width: 1024px) {
+	*{}
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    *{}
+}
+
+@media (max-width: 768px) {
+    #s-drop-img .upload__box {
+        width: 50%;
+        height: 200px;
+        margin: 0;
+    }
+
+    #s-drop-img .upload__btn {
+        font-size: 65px;
+    }
+
+    #s-drop-img .img-bg {
+    }
+
+    #s-drop-img .upload__img-box {
+        width: 50%;
+        height: 200px;
+    }
+
+    #s-drop-img .upload__img-wrap > div {
+        width: 50%;
+    }
+
+    #s-drop-img {
+        padding-bottom: 50px;
+    }
+
+    #s-drop-img .select-bg button {
+        width: 35px;
+        height: 35px;
+    }
+}
