@@ -65,4 +65,9 @@
         width: 35px;
         height: 35px;
     }
+    .user-box {width: 60% !important;}
+
+    .u-actions {
+        width: 40% !important;
+    }
 }
