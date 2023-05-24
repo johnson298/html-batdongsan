@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../asset/bootstrap-5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/fontawesome-6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="../asset/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../asset/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="../asset/css/responsive.css">
+    <link rel="stylesheet" href="../asset/css/jquery-ui.css">
+
+    <script src="../asset/js/jquery-3.6.0.min.js"></script>
+    <script src="../asset/bootstrap-5.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../asset/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../asset/js/source.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper">
+    <header id="header">
+        <div class="logo">
+            <img src="../asset/images/logo.png" alt="">
+        </div>
+    </header>
+    <div class="request">
+        <div class="p-3 bg-white">
+            <h5 class="text-danger">Vui lòng điền phiếu nhu cầu</h5>
+            <div class="baseColor">Khi bạn điền thông tin nhu cầu, chúng tôi sẽ lọc và đưa đến cho bạn những bất động sản phù hợp với bạn.</div>
+        </div>
+
+
+        <div class="form-create">
+            <form action="">
+                <div class="form-card">
+                    <div class="mb-3">
+                        <label class="form-label">Nhu cầu</label>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="check-b">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Cần mua</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="check-b">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Cần thuê</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Khu vực bạn cần <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Loại bất động sản <span class="text-danger">*</span></label>
+                        <select class="form-select" >
+                            <option selected>Căn hộ chung cư</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-6">
+                            <label class="form-label">Hướng</label>
+                            <div class="input-group mb-3">
+                                <select class="form-select" >
+                                    <option selected>Nam</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Diện tích sử dụng</label>
+                            <div class="input-group mb-3">
+                                <select class="form-select" >
+                                    <option selected>Từ 10 - 20m2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bán kính trong khoảng</label>
+                        <div id="range-slider">
+                            <div class="range-amount d-flex justify-content-between">
+                                <span class="text-dark">1km</span>
+                                <input type="text" id="amountKm" class="show-price" readonly style="border:0;">
+                                <span class="text-dark">100km</span>
+                            </div>
+                            <div id="slider-range"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3 pt-3 border-top">
+                        <label class="form-label">Khoảng giá</label>
+                        <div id="range-slider-price">
+                            <div class="range-amount d-flex justify-content-between">
+                                <span class="text-dark">100 triệu</span>
+                                <input type="text" id="amountPrice" class="show-price" readonly style="border:0;">
+                                <span class="text-dark">10 tỷ</span>
+                            </div>
+                            <div id="slider-range-price"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <button class="btn btn-danger d-block w-100 py-2">Gửi yêu cầu</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="foot-action">
+        <a href="" class="active">
+            <img src="../asset/images/icon/file2.svg" alt="">
+            <span>Danh sách tin</span>
+        </a>
+        <a href="">
+            <img src="../asset/images/icon/ticket.svg" alt="">
+            <span>Phiếu nhu cầu</span>
+        </a>
+        <a href="">
+            <img src="../asset/images/icon/user-circle.svg" alt="">
+            <span>Tài khoản</span>
+        </a>
+    </div>
+</footer>
+
+<!-- Modal Search-->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tìm kiếm</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Nhập từ khóa...">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Filter-->
+<div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Loại bất động sản</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-filter">
+                    <div class="form-check">
+                        <label class="form-check-label" for="c1">
+                            Căn hộ chung cư
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c1">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="c2">
+                            Căn hộ chung cư
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c2">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="c3">
+                            Biệt thự
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c3">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="c4">
+                            Đất
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c4">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Switch Role-->
+<div class="modal fade" id="switchRole" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Thay đổi vai trò người dùng</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-dark">Bạn có chắc muốn đổi sang vai trò người bán, bấm đồng ý để chuyển sang người bán.</div>
+                <div class="d-flex gap-2 mt-3">
+                    <button class="btn bg-dark-bg-subtle w20">Hủy</button>
+                    <button class="btn btn-danger flex-grow-1">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../asset/js/source.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+
+        // khoảng cách
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 1,
+            max: 100,
+            step: 1,
+            values: [ 10, 50 ],
+            slide: function( event, ui ) {
+                $( "#amountKm" ).val( `Từ ${ui.values[ 0 ]}km - đến ${ui.values[ 1 ]}km`);
+            }
+        });
+        $( "#amountKm" ).val(`Từ ${$( "#slider-range" ).slider( "values", 0 )}km - đến ${$( "#slider-range" ).slider( "values", 1 )}km`);
+
+
+        // giá tiền
+        $( "#slider-range-price" ).slider({
+            range: true,
+            min: 100,
+            max: 10000,
+            step: 50,
+            values: [ 100, 1000 ],
+            slide: function( event, ui ) {
+                $( "#amountPrice" ).val( `${ui.values[ 0 ]}triệu - ${ui.values[ 1 ]}triệu`);
+            }
+        });
+        $( "#amountPrice" ).val(`${$( "#slider-range-price" ).slider( "values", 0 )}triệu - ${$( "#slider-range-price" ).slider( "values", 1 )}triệu`);
+    } );
+
+</script>
+</body>
+</html>

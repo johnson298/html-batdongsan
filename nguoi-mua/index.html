@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../asset/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/responsive.css">
+    <link rel="stylesheet" href="../asset/css/jquery-ui.css">
 
     <script src="../asset/js/jquery-3.6.0.min.js"></script>
     <script src="../asset/bootstrap-5.2.0/js/bootstrap.min.js"></script>
@@ -34,161 +35,155 @@
             <img src="../asset/images/user.png" alt="">
             <div class="info">
                 <div class="name">Trần Quốc Anh</div>
-                <div class="role text-danger"><span class="tag-role bg-danger"></span> Người bán</div>
+                <div class="role text-danger"><span class="tag-role bg-danger"></span> Người mua</div>
             </div>
         </div>
         <div class="d-flex u-actions">
-            <span  data-bs-toggle="modal" data-bs-target="#searchModal"><img src="../asset/images/icon/search.svg" alt=""></span>
+            <span data-bs-toggle="modal" data-bs-target="#searchModal"><img src="../asset/images/icon/search.svg" alt=""></span>
             <span><img src="../asset/images/icon/notification.svg" alt=""></span>
-            <span><img src="../asset/images/icon/connection.svg" alt=""></span>
+            <span data-bs-toggle="modal" data-bs-target="#switchRole"><img src="../asset/images/icon/connection.svg" alt=""></span>
         </div>
     </div>
-    <nav class="tab-product">
+    <nav class="tab-product tab-buyer">
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Tất cả (8)</button>
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Đã duyệt (8)
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Tin phù hợp (24)</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Tin yêu thích (10)
             </button>
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Đã bán (4)
-            </button>
-            <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Chờ
-                duyệt (4)
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Tin yêu thích (10)
             </button>
         </div>
     </nav>
+    <div class="filters">
+        <h4>Danh sách BĐS phù hợp</h4>
+        <div class="d-flex justify-content-between">
+            <div>Có <span class="text-dark">4,320,466</span> kết quả</div>
+            <div class="ac-filter">
+                <img  data-bs-toggle="modal" data-bs-target="#modalFilter" src="../asset/images/icon/filter.svg" alt="">
+            </div>
+        </div>
+    </div>
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-            <div class="pros">
-                <div class="view-home">
-                    <img src="../asset/images/home.png" alt="">
-                    <div class="info">
-                        <h3 class="title">Cần bán căn hộ tại An Bình City diện tích 90m2.</h3>
-                        <ul class="params">
-                            <li class="text-danger">2,3 Tỷ</li>
-                            <li class="">90m2</li>
-                            <li class="">2PN</li>
-                        </ul>
-                        <div class="h-type">Loại hình: <strong>Căn hộ chung cư</strong></div>
-                    </div>
-                </div>
-                <div class="h-status">
-                    <div class="h-type">Trạng thái: <strong class="text-primary">Đang hoạt động</strong></div>
-                    <div class="h-type">Ngày đăng: <strong class="text-dark">11 Thg 5, 2023</strong></div>
-                </div>
-                <div class="h-react">
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/view.svg" alt=""> 250
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/press.svg" alt=""> 44
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/calling.svg" alt=""> 12
-                    </span>
-                </div>
-                <div class="h-action">
-                    <button class="btn btn-danger">Đẩy Tin</button>
-                    <button class="btn bg-danger-bg-subtle">Đã Bán</button>
-                    <button class="btn bg-dark-bg-subtle btn-edit"><img src="../asset/images/icon/edit-rectangle.svg" alt=""></button>
-                </div>
-            </div>
-            <div class="pros">
-                <div class="view-home">
-                    <img src="../asset/images/home.png" alt="">
-                    <div class="info">
-                        <h3 class="title">Cần bán căn hộ tại An Bình City diện tích 90m2.</h3>
-                        <ul class="params">
-                            <li class="text-danger">2,3 Tỷ</li>
-                            <li class="">90m2</li>
+            <div class="product">
+                <a href="">
+                    <span class="badge rounded-pill text-bg-light"><img src="../asset/images/icon/user-sm.svg" alt=""> Môi giới</span>
+                    <img class="img" src="../asset/images/home2.png" alt="">
+                    <div class="ct">
+                        <div class="place d-flex justify-content-between">
+                            <span class="text-primary">Bắc Từ Liêm, Hà Nội - 4km</span>
+                            <span>5 giờ trước</span>
+                        </div>
+                        <h5 class="title">bán căn hộ tại An Bình City diện tích 90m2 - Đầy đủ nội thất - Chính chủ</h5>
+                        <div class="d-flex measure align-items-center"><span class="text-danger">3,75 Tỷ</span> <span>-</span> <span>41,67 triệu/m2</span></div>
+                        <ul>
+                            <li>Căn hộ chung cư</li>
+                            <li>90m2</li>
                             <li>2PN</li>
                         </ul>
-                        <div class="h-type">Loại hình: <strong>Căn hộ chung cư</strong></div>
+                        <div class="p-action">
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/remove-circle.svg" alt=""></button>
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/heart.svg" alt=""></button>
+                            <button class="btn btn-danger">Liên hệ</button>
+                        </div>
                     </div>
-                </div>
-                <div class="h-status">
-                    <div class="h-type">Trạng thái: <strong class="text-warning">Đang chờ duyệt</strong></div>
-                    <div class="h-type">Ngày đăng: <strong class="text-dark">11 Thg 5, 2023</strong></div>
-                </div>
-                <div class="h-react">
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/view.svg" alt=""> 250
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/press.svg" alt=""> 44
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/calling.svg" alt=""> 12
-                    </span>
-                </div>
-                <div class="h-action">
-                    <button class="btn bg-dark-bg-subtle">Hủy</button>
-                    <button class="btn bg-dark-bg-subtle btn-edit"><img src="../asset/images/icon/edit-rectangle.svg" alt=""></button>
-                </div>
+                </a>
             </div>
-            <div class="pros">
-                <div class="view-home">
-                    <img src="../asset/images/home.png" alt="">
-                    <div class="info">
-                        <h3 class="title">Cần bán căn hộ tại An Bình City diện tích 90m2.</h3>
-                        <ul class="params">
-                            <li class="text-danger">2,3 Tỷ</li>
-                            <li class="">90m2</li>
-                            <li class="">2PN</li>
+            <div class="product">
+                <a href="">
+                    <span class="badge rounded-pill text-bg-light"><img src="../asset/images/icon/user-sm.svg" alt=""> Môi giới</span>
+                    <span class="badge vjp rounded-pill text-bg-light"><img src="../asset/images/icon/reward.svg" alt=""> TIN VIP</span>
+                    <img class="img" src="../asset/images/home2.png" alt="">
+                    <div class="ct">
+                        <div class="place d-flex justify-content-between">
+                            <span class="text-primary">Bắc Từ Liêm, Hà Nội - 4km</span>
+                            <span>5 giờ trước</span>
+                        </div>
+                        <h5 class="title">bán căn hộ tại An Bình City diện tích 90m2 - Đầy đủ nội thất - Chính chủ</h5>
+                        <div class="d-flex measure align-items-center"><span class="text-danger">3,75 Tỷ</span> <span>-</span> <span>41,67 triệu/m2</span></div>
+                        <ul>
+                            <li>Căn hộ chung cư</li>
+                            <li>90m2</li>
+                            <li>2PN</li>
                         </ul>
-                        <div class="h-type">Loại hình: <strong>Căn hộ chung cư</strong></div>
+                        <div class="p-action">
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/remove-circle.svg" alt=""></button>
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/heart.svg" alt=""></button>
+                            <button class="btn btn-danger">Liên hệ</button>
+                        </div>
                     </div>
-                </div>
-                <div class="h-status">
-                    <div class="h-type">Trạng thái: <strong class="text-danger">Đã hủy</strong></div>
-                    <div class="h-type">Ngày đăng: <strong class="text-dark">11 Thg 5, 2023</strong></div>
-                </div>
-                <div class="h-react">
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/view.svg" alt=""> 250
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/press.svg" alt=""> 44
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/calling.svg" alt=""> 12
-                    </span>
-                </div>
-                <div class="h-action">
-                    <button class="btn btn-outline-danger">Đăng lại</button>
-                    <button class="btn bg-dark-bg-subtle btn-edit"><img src="../asset/images/icon/edit-rectangle.svg" alt=""></button>
-                </div>
+                </a>
             </div>
-            <div class="pros">
-                <div class="view-home">
-                    <img src="../asset/images/home.png" alt="">
-                    <div class="info">
-                        <h3 class="title">Cần bán căn hộ tại An Bình City diện tích 90m2.</h3>
-                        <ul class="params">
-                            <li class="text-danger">2,3 Tỷ</li>
-                            <li class="">90m2</li>
-                            <li class="">2PN</li>
+            <div class="product">
+                <a href="">
+                    <span class="badge rounded-pill text-bg-light"><img src="../asset/images/icon/user-sm.svg" alt=""> Môi giới</span>
+                    <img class="img" src="../asset/images/home2.png" alt="">
+                    <div class="ct">
+                        <div class="place d-flex justify-content-between">
+                            <span class="text-primary">Bắc Từ Liêm, Hà Nội - 4km</span>
+                            <span>5 giờ trước</span>
+                        </div>
+                        <h5 class="title">bán căn hộ tại An Bình City diện tích 90m2 - Đầy đủ nội thất - Chính chủ</h5>
+                        <div class="d-flex measure align-items-center"><span class="text-danger">3,75 Tỷ</span> <span>-</span> <span>41,67 triệu/m2</span></div>
+                        <ul>
+                            <li>Căn hộ chung cư</li>
+                            <li>90m2</li>
+                            <li>2PN</li>
                         </ul>
-                        <div class="h-type">Loại hình: <strong>Căn hộ chung cư</strong></div>
+                        <div class="p-action">
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/remove-circle.svg" alt=""></button>
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/heart.svg" alt=""></button>
+                            <button class="btn btn-danger">Liên hệ</button>
+                        </div>
                     </div>
-                </div>
-                <div class="h-status">
-                    <div class="h-type">Trạng thái: <strong class="text-warning">Đang chờ duyệt</strong></div>
-                    <div class="h-type">Ngày đăng: <strong class="text-dark">11 Thg 5, 2023</strong></div>
-                </div>
-                <div class="h-react">
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/view.svg" alt=""> 250
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/press.svg" alt=""> 44
-                    </span>
-                    <span class="rc-item">
-                        <img src="../asset/images/icon/calling.svg" alt=""> 12
-                    </span>
-                </div>
-                <div class="h-action">
-                    <button class="btn bg-dark-bg-subtle">Hủy</button>
-                    <button class="btn bg-dark-bg-subtle btn-edit"><img src="../asset/images/icon/edit-rectangle.svg" alt=""></button>
-                </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="">
+                    <span class="badge rounded-pill text-bg-light"><img src="../asset/images/icon/shield.svg" alt=""> Chính chủ</span>
+                    <img class="img" src="../asset/images/home2.png" alt="">
+                    <div class="ct">
+                        <div class="place d-flex justify-content-between">
+                            <span class="text-primary">Bắc Từ Liêm, Hà Nội - 4km</span>
+                            <span>5 giờ trước</span>
+                        </div>
+                        <h5 class="title">bán căn hộ tại An Bình City diện tích 90m2 - Đầy đủ nội thất - Chính chủ</h5>
+                        <div class="d-flex measure align-items-center"><span class="text-danger">3,75 Tỷ</span> <span>-</span> <span>41,67 triệu/m2</span></div>
+                        <ul>
+                            <li>Căn hộ chung cư</li>
+                            <li>90m2</li>
+                            <li>2PN</li>
+                        </ul>
+                        <div class="p-action">
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/remove-circle.svg" alt=""></button>
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/heart.svg" alt=""></button>
+                            <button class="btn btn-danger">Liên hệ</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="">
+                    <span class="badge rounded-pill text-bg-light"><img src="../asset/images/icon/user-sm.svg" alt=""> Môi giới</span>
+                    <img class="img" src="../asset/images/home2.png" alt="">
+                    <div class="ct">
+                        <div class="place d-flex justify-content-between">
+                            <span class="text-primary">Bắc Từ Liêm, Hà Nội - 4km</span>
+                            <span>5 giờ trước</span>
+                        </div>
+                        <h5 class="title">bán căn hộ tại An Bình City diện tích 90m2 - Đầy đủ nội thất - Chính chủ</h5>
+                        <div class="d-flex measure align-items-center"><span class="text-danger">3,75 Tỷ</span> <span>-</span> <span>41,67 triệu/m2</span></div>
+                        <ul>
+                            <li>Căn hộ chung cư</li>
+                            <li>90m2</li>
+                            <li>2PN</li>
+                        </ul>
+                        <div class="p-action">
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/remove-circle.svg" alt=""></button>
+                            <button class="btn bg-dark-bg-subtle w10"><img src="../asset/images/icon/heart.svg" alt=""></button>
+                            <button class="btn btn-danger">Liên hệ</button>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
@@ -205,11 +200,12 @@
 <footer id="footer">
     <div class="foot-action">
         <a href="" class="active">
-            <img src="../asset/images/icon/manage.svg" alt="">
-            <span>Quản lý tin</span>
+            <img src="../asset/images/icon/file2.svg" alt="">
+            <span>Danh sách tin</span>
         </a>
-        <a href="dk-can-ho-chung-cu.html">
-            <span class="add-action"><img src="../asset/images/icon/add.svg" alt=""></span>
+        <a href="">
+            <img src="../asset/images/icon/ticket.svg" alt="">
+            <span>Phiếu nhu cầu</span>
         </a>
         <a href="">
             <img src="../asset/images/icon/user-circle.svg" alt="">
@@ -218,7 +214,7 @@
     </div>
 </footer>
 
-<!-- Modal -->
+<!-- Modal Search-->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -236,6 +232,65 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                 <button type="button" class="btn btn-primary">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Filter-->
+<div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Loại bất động sản</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-filter">
+                    <div class="form-check">
+                        <label class="form-check-label" for="c1">
+                            Căn hộ chung cư
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c1">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="c2">
+                            Căn hộ chung cư
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c2">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="c3">
+                            Biệt thự
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c3">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="c4">
+                            Đất
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="c4">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Switch Role-->
+<div class="modal fade" id="switchRole" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Thay đổi vai trò người dùng</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-dark">Bạn có chắc muốn đổi sang vai trò người bán, bấm đồng ý để chuyển sang người bán.</div>
+                <div class="d-flex gap-2 mt-3">
+                    <button class="btn bg-dark-bg-subtle w20">Hủy</button>
+                    <button class="btn btn-danger flex-grow-1">Đồng ý</button>
+                </div>
             </div>
         </div>
     </div>
