@@ -65,7 +65,7 @@
         width: 35px;
         height: 35px;
     }
-    .user-box {width: 60% !important;}
+    .user-box {width: 60% !important; flex: 1;}
 
     .u-actions {
         width: 40% !important;
