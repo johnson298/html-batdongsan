@@ -225,6 +225,16 @@
 <script>
     $( function() {
 
+        function formatPriceNumber(number) {
+            if (number >= 1000000000) {
+                return (number / 1000000000).toFixed(1).replace(/\.0$/, '') + ' tỷ';
+            } else if (number >= 1000000) {
+                return (number / 1000000).toFixed(1).replace(/\.0$/, '') + ' triệu';
+            } else {
+                return number.toString();
+            }
+        }
+
         // khoảng cách
         $( "#slider-range" ).slider({
             range: true,
@@ -242,15 +252,15 @@
         // giá tiền
         $( "#slider-range-price" ).slider({
             range: true,
-            min: 100,
-            max: 10000,
-            step: 50,
-            values: [ 100, 1000 ],
+            min: 100000000,
+            max: 10000000000,
+            step: 50000000,
+            values: [ 100000000, 1000000000 ],
             slide: function( event, ui ) {
-                $( "#amountPrice" ).val( `${ui.values[ 0 ]}triệu - ${ui.values[ 1 ]}triệu`);
+                $( "#amountPrice" ).val( `${formatPriceNumber(ui.values[ 0 ])} - ${formatPriceNumber(ui.values[ 1 ])}`);
             }
         });
-        $( "#amountPrice" ).val(`${$( "#slider-range-price" ).slider( "values", 0 )}triệu - ${$( "#slider-range-price" ).slider( "values", 1 )}triệu`);
+        $( "#amountPrice" ).val(`${formatPriceNumber($( "#slider-range-price" ).slider( "values", 0 ))} - ${formatPriceNumber($( "#slider-range-price" ).slider( "values", 1 ))}`);
     } );
 
 </script>
