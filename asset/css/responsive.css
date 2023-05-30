@@ -1,5 +1,57 @@
 @media (min-width: 576px) {
     *{}
+    body {
+        font-size: 13px;
+    }
+    .add-action {
+        width: 65px;
+        transform: translateY(-35px);
+    }
+
+    .foot-action {
+        padding: 8px;
+    }
+
+    footer#footer {
+        height: 80px;
+    }
+    #s-drop-img .upload__box {
+        width: 100% !important;
+        height: 200px !important;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+
+    #s-drop-img .upload__btn {
+        font-size: 65px;
+    }
+
+    #s-drop-img .img-bg {
+    }
+
+    #s-drop-img .upload__img-box {
+        width: 50%;
+        height: 200px;
+    }
+
+    #s-drop-img .upload__img-wrap > div {
+        width: calc(100% / 3);
+        height: 110px;
+    }
+
+    #s-drop-img {
+        padding-bottom: 50px;
+    }
+
+    #s-drop-img .select-bg button {
+        width: 35px;
+        height: 35px;
+    }
+    .user-box {width: 60% !important; flex: 1;}
+
+    .u-actions {
+        width: 40% !important;
+    }
 }
 
 /*pc*/
